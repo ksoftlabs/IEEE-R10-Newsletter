@@ -1,1 +1,1 @@
-# IEEE-R10-Newsletter-
+# IEEE R10 Newsletter
