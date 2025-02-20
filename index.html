@@ -5,13 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IEEE R10 Newsletter - January 2025</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet">-->
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            /*            font-family: 'Open Sans', sans-serif;*/
+            font-family: sans-serif;
             background-color: #ffffff;
-            color: #333;
+            color: #000;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        p {
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 22px;
+        }
+        
+        h2 
+        {
+            font-size: 36px;
         }
 
         .header {
@@ -39,11 +56,10 @@
         .content {
             max-width: 1200px;
             margin: 20px auto;
+            padding: 10px;
         }
 
-        h2 {
-            font-weight: 900;
-        }
+
 
         .card {
             border: none;
@@ -56,6 +72,8 @@
             transform: translateY(-5px);
         }
 
+
+
         .custom-btn {
             background: linear-gradient(45deg, #04649c, #04a4c4);
             border: none;
@@ -64,16 +82,77 @@
             color: #fff;
             font-weight: bold;
             transition: background 0.3s;
+            width: 80%;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
         }
 
         .custom-btn:hover {
             background: linear-gradient(45deg, #04a4c4, #04649c);
         }
 
+
         .new {
             background-color: #04649c;
             padding-top: 30px;
             border-radius: 10px;
+        }
+
+
+
+        .new .card {
+            background: #fff;
+            margin: 20px;
+        }
+
+        .new .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .new .column {
+            flex: 1;
+            min-width: 200px;
+            max-width: 33.3%;
+        }
+
+        /*
+        @media (max-width: 992px) {
+            .new .column {
+                max-width: 48%;
+            }
+        }
+*/
+
+        @media (max-width: 768px) {
+            .new .column {
+                max-width: 100%;
+            }
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .list-group {
+             list-style: none;
+            padding-left: 0;
+         }
+
+        .list-group-item {
+            border: none;
+            padding: 10px 15px;
+            width: 100%;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa !important;
         }
 
         .footer {
@@ -83,16 +162,114 @@
             color: #fff;
         }
 
+        .container,
+        .container-fluid {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            /*            gap: 15px;*/
+        }
+
+        .col-md-4,
+        .col-md-6 {
+            position: relative;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+
+            .col-md-4 {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        .p-3 {
+            padding: 1rem !important;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header img {
+                max-height: 40px;
+            }
+
+            .custom-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .col-md-4,
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .column {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="header container-fluid">
+    <div class="header">
         <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10-newsletter-white-logo.png" alt="IEEE R10 Connect Logo">
         <h1>IEEE R10 Newsletter - January 2025<br><span style='font-size: 16px; color: gold;'>Volume 26 | Issue 1</span></h1>
         <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10_logo_white.png" alt="IEEE Region 10 Logo">
     </div>
-    <div class="content container">
+    <div class="content">
         <div class="row">
             <div class="col-md-6">
                 <div class="card p-3 mb-4 text-center">
@@ -102,53 +279,54 @@
             </div>
             <div class="col-md-6">
                 <div class="card p-3 mb-4">
-                    <h2>Message from the IEEE R10 Director</h2>
-                    <p style="font-style: italic">Takako Hashimoto<br>
-                        IEEE Region 10 Director, 2025–2026</p>
-                    <p>As we begin this exciting new term, it is my greatest honor to serve as your IEEE Region 10 Director for 2025–2026. I am thrilled to have the opportunity to collaborate with such an exceptional team of dedicated professionals and leaders, and I look forward to continuing the incredible legacy of Region 10.</p>
+                    <h2 style="font-weight: 800;">Message from the IEEE R10 Director</h2>
+                    <p style="font-style: italic">Takako Hashimoto<br> IEEE Region 10 Director, 2025–2026</p>
+                    <p>As we begin this exciting new term, it is my greatest honor to serve as your IEEE Region 10 Director for 2025–2026. I am thrilled to have the opportunity to collaborate with such an exceptional team of dedicated professionals and leaders,
+                        and I look forward to continuing the incredible legacy of Region 10.</p>
                     <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read more</a>
                 </div>
-                
-                <div class="card p-3 mb-4">
-                    <h2>IEEE R10 Newsletter Chair's Message</h2>
-                    <p style="font-style: italic">Akila Wijethunge, Chair <br>
-                       IEEE R10 Newsletter Committee 2025</p>
-                    <p>As the IEEE Region 10 Newsletter Chair, I am honored to have the opportunity to serve and connect with all of you. The goal of our newsletter is to provide valuable and relevant information about the activities and events conducted by IEEE R10, as well as to keep you informed about the latest opportunities and activities in the interest of the membership.</p>
-                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read more</a>
-                </div>
-                
-            </div>
-        </div>
-        <div class="row new">
-            <div class="col-md-4">
-                <div class="card p-3 mb-4">
-                    <h2>IEEE R10 HTC 2025</h2>
-                    <p>IEEE R10 Humanitarian Technology Conference (HTC2025), organized and hosted by the IEEE Tokyo Section, will be held at Chiba University of Commerce, Japan, from September 29 to October 1, 2025.</p>
-                    <a href="https://ieee-jp.org/section/tokyo/event/r10htc2025/" class="btn custom-btn">Register now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 mb-4">
-                    <h2>IEEE R10 TENCON 2025</h2>
-                    <p>It is with great pleasure for IEEE Malaysia Section to announce the 2025 IEEE Region 10 Conference (TENCON) to be held in Kota Kinabalu, Sabah, Malaysia from 27th – 30th October 2025. </p>
-                    <a href="https://ieeemy.org/tencon2025/" class="btn custom-btn">Register now</a>
-                </div>
-            </div>
 
-            <div class="col-md-4">
                 <div class="card p-3 mb-4">
-                    <h2>IEEE R10 TENSYMP 2025</h2>
-                    <p>IEEE R10 Symposium 2025 is being organised by the IEEE New Zealand South Section and will be in-person held from 7-9 July 2025 in Christchurch, New Zealand.</p>
-                    <a href="https://attend.ieee.org/tensymp25/" class="btn custom-btn">Register now</a>
+                    <h2 style="font-weight: 800;">IEEE R10 Newsletter Chair's Message</h2>
+                    <p style="font-style: italic">Akila Wijethunge, Chair <br> IEEE R10 Newsletter Committee 2025</p>
+                    <p>As the IEEE Region 10 Newsletter Chair, I am honored to have the opportunity to serve and connect with all of you. The goal of our newsletter is to provide valuable and relevant information about the activities and events conducted
+                        by IEEE R10, as well as to keep you informed about the latest opportunities and activities in the interest of the membership.</p>
+                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read more</a>
                 </div>
             </div>
         </div>
-        
-         <div class="content container mt-5">
+    </div>
+
+    <div class="row new">
+        <div class="column">
+            <div class="card p-3 mb-4">
+                <h2 style="font-weight: 800;">IEEE R10 HTC 2025</h2>
+                <p>IEEE R10 Humanitarian Technology Conference (HTC2025), organized and hosted by the IEEE Tokyo Section, will be held at Chiba University of Commerce, Japan, from September 29 to October 1, 2025.</p>
+                <a href="https://ieee-jp.org/section/tokyo/event/r10htc2025/" class="btn custom-btn">Register now</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card p-3 mb-4">
+                <h2 style="font-weight: 800;">IEEE R10 TENCON 2025</h2>
+                <p>It is with great pleasure for IEEE Malaysia Section to announce the 2025 IEEE Region 10 Conference (TENCON) to be held in Kota Kinabalu, Sabah, Malaysia from 27th – 30th October 2025. </p>
+                <a href="https://ieeemy.org/tencon2025/" class="btn custom-btn">Register now</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card p-3 mb-4">
+                <h2 style="font-weight: 800;">IEEE R10 TENSYMP 2025</h2>
+                <p>IEEE R10 Symposium 2025 is being organised by the IEEE New Zealand South Section and will be in-person held from 7-9 July 2025 in Christchurch, New Zealand.</p>
+                <a href="https://attend.ieee.org/tensymp25/" class="btn custom-btn">Register now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-5">
         <div class="card p-3 mb-4">
             <h2 style="font-weight: 800;">Read more on 2025 plans of IEEE R10 Committees</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="column col-md-6">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-light">IEEE R10 Professional Activities Committee</li>
                         <li class="list-group-item">IEEE R10 Women In Engineering Committee</li>
@@ -157,7 +335,7 @@
                         <li class="list-group-item bg-light">IEEE R10 Education Activities Committee</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="column col-md-6">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">IEEE R10 Ad Hoc Committee on National Societies Agreements</li>
                         <li class="list-group-item bg-light">IEEE R10 Young Professionals Committee</li>
@@ -171,11 +349,7 @@
         </div>
     </div>
 
-    </div>
     <div class="footer">
         <p>&copy; 2025 IEEE R10 | All Rights Reserved | <a href="https://ieeer10.org/contact" class="text-white">Contact Us</a></p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+</body></html>
