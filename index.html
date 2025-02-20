@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,351 +5,382 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IEEE R10 Newsletter - January 2025</title>
-    <!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet">-->
     <style>
         body {
-            /*            font-family: 'Open Sans', sans-serif;*/
             font-family: sans-serif;
-            background-color: #ffffff;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
             color: #000;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            width: 100%;
         }
 
         a {
             text-decoration: none;
-            color: #fff;
         }
 
-        p {
-            font-size: 16px;
-            letter-spacing: 1px;
-            line-height: 22px;
-        }
-        
-        h2 
-        {
-            font-size: 36px;
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
-            background-color: #04649c;
-            padding: 20px;
+            background: linear-gradient(to right, #04649c, #04a4c4);
+            padding: 30px;
             text-align: center;
             color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+            border-radius: 12px 12px 0 0;
         }
 
         .header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            flex-grow: 1;
-            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0;
         }
 
-        .header img {
-            max-height: 50px;
+        .logo {
+            max-width: 100px;
+            display: block;
+            margin: 15px auto;
         }
 
         .content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 10px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #444;
+            padding: 20px;
         }
 
-
+        h2 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 12px;
+        }
 
         .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-
-
-        .custom-btn {
-            background: linear-gradient(45deg, #04649c, #04a4c4);
-            border: none;
-            border-radius: 25px;
-            padding: 10px 20px;
+        .button {
+            display: inline-block;
+            background: #04649c;
             color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
             font-weight: bold;
-            transition: background 0.3s;
-            width: 80%;
-            text-align: center;
-            display: block;
-            margin: 0 auto;
+            transition: all 0.3s ease;
         }
 
-        .custom-btn:hover {
-            background: linear-gradient(45deg, #04a4c4, #04649c);
+        .button:hover {
+            background: #04a4c4;
+            transform: translateY(-2px);
         }
-
 
         .new {
-            background-color: #04649c;
-            padding-top: 30px;
-            border-radius: 10px;
-        }
-
-
-
-        .new .card {
-            background: #fff;
-            margin: 20px;
-        }
-
-        .new .row {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 20px;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .new .column {
-            flex: 1;
-            min-width: 200px;
-            max-width: 33.3%;
-        }
-
-        /*
-        @media (max-width: 992px) {
-            .new .column {
-                max-width: 48%;
-            }
-        }
-*/
-
-        @media (max-width: 768px) {
-            .new .column {
-                max-width: 100%;
-            }
-        }
-
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .list-group {
-             list-style: none;
-            padding-left: 0;
-         }
-
-        .list-group-item {
-            border: none;
-            padding: 10px 15px;
+        .card {
             width: 100%;
+            max-width: 500px;
+            /* Adjust as needed */
         }
 
-        .bg-light {
-            background-color: #f8f9fa !important;
+        @media screen and (max-width: 600px) {
+            .event-card {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .event-container {
+                padding: 10px !important;
+            }
+
+            .event-card h3 {
+                font-size: 16px !important;
+            }
+
+            .event-card p {
+                font-size: 12px !important;
+            }
+
+            .event-card a {
+                padding: 6px 12px !important;
+                font-size: 12px !important;
+            }
         }
 
         .footer {
-            background-color: #04649c;
+            background: #04649c;
             text-align: center;
-            padding: 10px;
-            color: #fff;
-        }
-
-        .container,
-        .container-fluid {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            /*            gap: 15px;*/
-        }
-
-        .col-md-4,
-        .col-md-6 {
-            position: relative;
             padding: 15px;
-            box-sizing: border-box;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 0 0 12px 12px;
         }
 
-        @media (min-width: 576px) {
-            .container {
-                max-width: 540px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                max-width: 720px;
-            }
-
-            .col-md-4 {
-                flex: 0 0 33.333%;
-                max-width: 33.333%;
-            }
-
-            .col-md-6 {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .container {
-                max-width: 960px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1140px;
-            }
-        }
-
-        .p-3 {
-            padding: 1rem !important;
-        }
-
-        .mb-4 {
-            margin-bottom: 1.5rem !important;
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-            }
-
-            .header h1 {
-                font-size: 20px;
-            }
-
-            .header img {
-                max-height: 40px;
-            }
-
-            .custom-btn {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
-            .col-md-4,
-            .col-md-6 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            .row {
-                flex-direction: column;
-            }
-
-            .column {
-                width: 100%;
-                margin-bottom: 15px;
-            }
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10-newsletter-white-logo.png" alt="IEEE R10 Connect Logo">
-        <h1>IEEE R10 Newsletter - January 2025<br><span style='font-size: 16px; color: gold;'>Volume 26 | Issue 1</span></h1>
-        <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10_logo_white.png" alt="IEEE Region 10 Logo">
-    </div>
-    <div class="content">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card p-3 mb-4 text-center">
-                    <img src="https://newsletter.ieeer10.org/wp-content/uploads/2025/02/R10-Newsletter-January-2025.png" alt="R10 Newsletter January 2025" class="img-fluid rounded">
-                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn mt-3">Read more</a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card p-3 mb-4">
-                    <h2 style="font-weight: 800;">Message from the IEEE R10 Director</h2>
-                    <p style="font-style: italic">Takako Hashimoto<br> IEEE Region 10 Director, 2025–2026</p>
-                    <p>As we begin this exciting new term, it is my greatest honor to serve as your IEEE Region 10 Director for 2025–2026. I am thrilled to have the opportunity to collaborate with such an exceptional team of dedicated professionals and leaders,
-                        and I look forward to continuing the incredible legacy of Region 10.</p>
-                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read more</a>
-                </div>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #04649c; text-align: center; padding: 20px;">
+        <tr>
+            <td align="center" width="20%">
+                <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10-newsletter-white-logo.png" alt="IEEE R10 Connect Logo" width="100" style="max-width: 100px; display: block;">
+            </td>
+            <td align="center" width="60%">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 24px; color: #ffffff; margin: 0; line-height: 1.4;">
+                    IEEE R10 Newsletter - January 2025<br>
+                    <span style="font-size: 16px; color: gold;">Volume 26 | Issue 1</span>
+                </h1>
+            </td>
+            <td align="center" width="20%">
+                <img src="https://newsletter.ieeer10.org/wp-content/uploads/2023/02/r10_logo_white.png" alt="IEEE Region 10 Logo" width="100" style="max-width: 100px; display: block;">
+            </td>
+        </tr>
+    </table>
 
-                <div class="card p-3 mb-4">
-                    <h2 style="font-weight: 800;">IEEE R10 Newsletter Chair's Message</h2>
-                    <p style="font-style: italic">Akila Wijethunge, Chair <br> IEEE R10 Newsletter Committee 2025</p>
-                    <p>As the IEEE Region 10 Newsletter Chair, I am honored to have the opportunity to serve and connect with all of you. The goal of our newsletter is to provide valuable and relevant information about the activities and events conducted
-                        by IEEE R10, as well as to keep you informed about the latest opportunities and activities in the interest of the membership.</p>
-                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read more</a>
+    <!--    <div class="content container">-->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff;">
+                    <!-- Image Card -->
+                    <tr>
+                        <td align="center" style="padding: 15px;">
+                            <img src="https://newsletter.ieeer10.org/wp-content/uploads/2025/02/R10-Newsletter-January-2025.png" alt="R10 Newsletter January 2025" width="100%" style="max-width: 500px; border-radius: 5px; display: block;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding-bottom: 15px;">
+                            <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; padding: 12px 24px; 
+                              border-radius: 25px; display: inline-block; font-weight: bold; font-size: 16px;">
+                                Read more
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding: 20px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 10px; padding: 20px; 
+                      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+
+                                <tr>
+                                    <td align="center">
+                                        <h2 style="margin-bottom: 8px;">Message from the IEEE R10 Director</h2>
+                                        <p style="font-style: italic; font-size: 14px; margin: 0; color: #555;">
+                                            <strong>Takako Hashimoto</strong><br>IEEE Region 10 Director, 2025–2026
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 15px 20px;">
+                                        <p style="font-size: 16px; line-height: 1.5; color: #333; text-align: justify;">
+                                            As we begin this exciting new term, it is my greatest honor to serve as your IEEE Region 10 Director for 2025–2026.
+                                            I am thrilled to have the opportunity to collaborate with such an exceptional team of dedicated professionals and leaders,
+                                            and I look forward to continuing the incredible legacy of Region 10.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding-bottom: 20px;">
+                                        <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; padding: 12px 24px; 
+                              border-radius: 25px; display: inline-block; font-weight: bold; font-size: 16px;">
+                                            Read More
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                    <!-- Newsletter Chair's Message -->
+                    <tr>
+                        <td align="center" style="padding: 20px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 10px; padding: 20px; 
+                      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+
+                                <tr>
+                                    <td align="center">
+                                        <h2 style="margin-bottom: 8px;">IEEE R10 Newsletter Chair's Message</h2>
+                                        <p style="font-style: italic; font-size: 14px; margin: 0; color: #555;">
+                                            <strong>Akila Wijethunge</strong>, Chair<br>IEEE R10 Newsletter Committee 2025
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 15px 20px;">
+                                        <p style="font-size: 16px; line-height: 1.5; color: #333; text-align: justify;">
+                                            As the IEEE Region 10 Newsletter Chair, I am honored to have the opportunity to serve and connect with all of you.
+                                            Our newsletter aims to provide valuable insights on IEEE R10 activities and keep you updated with the latest opportunities and events.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding-bottom: 20px;">
+                                        <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; padding: 12px 24px; 
+                              border-radius: 25px; display: inline-block; font-weight: bold; font-size: 16px;">
+                                            Read More
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #04649c; padding: 30px; border-radius: 10px;">
+        <tr>
+            <td align="center">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 10px; padding: 20px; 
+                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                    <tr>
+                        <td align="center">
+                            <h2 style="margin-bottom: 20px; font-size: 22px; color: #04649c;">Upcoming IEEE R10 Conferences</h2>
+                        </td>
+                    </tr>
+
+                    <!-- Event Cards Container -->
+                    <tr>
+                        <td align="center">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <!-- Event 1 -->
+                                    <td align="center" class="event-card" width="33%" style="padding: 15px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center;">
+                                            <tr>
+                                                <td align="center">
+                                                    <h3 style="font-size: 18px; font-weight: 900; color: #04649c;">IEEE R10 HTC 2025</h3>
+                                                    <p style="font-size: 14px; color: #333; line-height: 1.5;">
+                                                        Sept 29 – Oct 1, 2025<br>Chiba University of Commerce, Japan
+                                                    </p>
+                                                    <a href="https://ieee-jp.org/section/tokyo/event/r10htc2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; 
+                                                   padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block;">
+                                                        Register Now
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <!-- Event 2 -->
+                                    <td align="center" class="event-card" width="33%" style="padding: 15px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center;">
+                                            <tr>
+                                                <td align="center">
+                                                    <h3 style="font-size: 18px; font-weight: 900; color: #04649c;">IEEE R10 TENCON 2025</h3>
+                                                    <p style="font-size: 14px; color: #333; line-height: 1.5;">
+                                                        Oct 27–30, 2025<br>Kota Kinabalu, Sabah, Malaysia
+                                                    </p>
+                                                    <a href="https://ieeemy.org/tencon2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; 
+                                                   padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block;">
+                                                        Register Now
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <!-- Event 3 -->
+                                    <td align="center" class="event-card" width="33%" style="padding: 15px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center;">
+                                            <tr>
+                                                <td align="center">
+                                                    <h3 style="font-size: 18px; font-weight: 900; color: #04649c;">IEEE R10 TENSYMP 2025</h3>
+                                                    <p style="font-size: 14px; color: #333; line-height: 1.5;">
+                                                        July 7–9, 2025<br>Christchurch, New Zealand
+                                                    </p>
+                                                    <a href="https://attend.ieee.org/tensymp25/" style="background-color: #04649c; color: #ffffff; text-decoration: none; 
+                                                   padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block;">
+                                                        Register Now
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 10px; padding: 20px; margin: 0 auto;">
+        <tr>
+            <td>
+                <h2 style="font-size: 30px; font-weight: 900; color: #000; text-align: center; margin-bottom: 15px;">
+                    Read more on 2025 plans of IEEE R10 Committees
+                </h2>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="5" border="0">
+                    <tr>
+                        <!-- Left Column -->
+                        <td width="50%" valign="top">
+                            <ul style="padding: 0; margin: 0; list-style-type: none;">
+                                <li style="background-color: #f8f9fa; padding: 8px;">IEEE R10 Professional Activities Committee</li>
+                                <li style="padding: 8px;">IEEE R10 Women In Engineering Committee</li>
+                                <li style="background-color: #f8f9fa; padding: 8px;">IEEE R10 Information Management Committee</li>
+                                <li style="padding: 8px;">IEEE R10 Humanitarian Technology Activities Committee</li>
+                                <li style="background-color: #f8f9fa; padding: 8px;">IEEE R10 Education Activities Committee</li>
+                            </ul>
+                        </td>
+                        <!-- Right Column -->
+                        <td width="50%" valign="top">
+                            <ul style="padding: 0; margin: 0; list-style-type: none;">
+                                <li style="padding: 8px;">IEEE R10 Ad Hoc Committee on National Societies Agreements</li>
+                                <li style="background-color: #f8f9fa; padding: 8px;">IEEE R10 Young Professionals Committee</li>
+                                <li style="padding: 8px;">IEEE R10 Life Member Committee</li>
+                                <li style="background-color: #f8f9fa; padding: 8px;">IEEE R10 Section and Chapter Committee</li>
+                                <li style="padding: 8px;">IEEE R10 Awards and Recognition Committee</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" style="background-color: #04649c; color: #ffffff; text-decoration: none; padding: 12px 24px; 
+                              border-radius: 25px; display: inline-block; font-weight: bold; font-size: 16px;">
+                        Read More
+                    </a>
                 </div>
-            </div>
-        </div>
-    </div>
+            </td>
+        </tr>
+    </table>
 
-    <div class="row new">
-        <div class="column">
-            <div class="card p-3 mb-4">
-                <h2 style="font-weight: 800;">IEEE R10 HTC 2025</h2>
-                <p>IEEE R10 Humanitarian Technology Conference (HTC2025), organized and hosted by the IEEE Tokyo Section, will be held at Chiba University of Commerce, Japan, from September 29 to October 1, 2025.</p>
-                <a href="https://ieee-jp.org/section/tokyo/event/r10htc2025/" class="btn custom-btn">Register now</a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card p-3 mb-4">
-                <h2 style="font-weight: 800;">IEEE R10 TENCON 2025</h2>
-                <p>It is with great pleasure for IEEE Malaysia Section to announce the 2025 IEEE Region 10 Conference (TENCON) to be held in Kota Kinabalu, Sabah, Malaysia from 27th – 30th October 2025. </p>
-                <a href="https://ieeemy.org/tencon2025/" class="btn custom-btn">Register now</a>
-            </div>
-        </div>
 
-        <div class="column">
-            <div class="card p-3 mb-4">
-                <h2 style="font-weight: 800;">IEEE R10 TENSYMP 2025</h2>
-                <p>IEEE R10 Symposium 2025 is being organised by the IEEE New Zealand South Section and will be in-person held from 7-9 July 2025 in Christchurch, New Zealand.</p>
-                <a href="https://attend.ieee.org/tensymp25/" class="btn custom-btn">Register now</a>
-            </div>
-        </div>
-    </div>
+    <!--    </div>-->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #04649c; padding: 15px 0; text-align: center;">
+        <tr>
+            <td style="color: #ffffff; font-size: 14px; font-family: Arial, sans-serif;">
+                &copy; 2025 IEEE R10 | All Rights Reserved |
+                <a href="https://ieeer10.org/contact" style="color: #ffffff; text-decoration: none;">Contact Us</a>
+            </td>
+        </tr>
+    </table>
 
-    <div class="content mt-5">
-        <div class="card p-3 mb-4">
-            <h2 style="font-weight: 800;">Read more on 2025 plans of IEEE R10 Committees</h2>
-            <div class="row">
-                <div class="column col-md-6">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-light">IEEE R10 Professional Activities Committee</li>
-                        <li class="list-group-item">IEEE R10 Women In Engineering Committee</li>
-                        <li class="list-group-item bg-light">IEEE R10 Information Management Committee</li>
-                        <li class="list-group-item">IEEE R10 Humanitarian Technology Activities Committee</li>
-                        <li class="list-group-item bg-light">IEEE R10 Education Activities Committee</li>
-                    </ul>
-                </div>
-                <div class="column col-md-6">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">IEEE R10 Ad Hoc Committee on National Societies Agreements</li>
-                        <li class="list-group-item bg-light">IEEE R10 Young Professionals Committee</li>
-                        <li class="list-group-item">IEEE R10 Life Member Committee</li>
-                        <li class="list-group-item bg-light">IEEE R10 Section and Chapter Committee</li>
-                        <li class="list-group-item">IEEE R10 Awards and Recognition Committee</li>
-                    </ul>
-                </div>
-            </div>
-            <a href="https://newsletter.ieeer10.org/ieee-r10-newsletter-january-edition-2025/" class="btn custom-btn">Read More</a>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2025 IEEE R10 | All Rights Reserved | <a href="https://ieeer10.org/contact" class="text-white">Contact Us</a></p>
-    </div>
 </body></html>
